@@ -1,0 +1,37 @@
+/**
+ * Motion a11y
+ */
+
+@media screen and (prefers-reduced-motion: reduce), (update: slow) {
+  * {
+    transition: none;
+  }
+}
+
+/**
+ * Styles
+ */
+
+@media (prefers-reduced-motion: reduce) {
+  body {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before {
+    -webkit-animation: none !important;
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+body {
+  margin: 0;
+}
+
+h1 {
+  font-size: 36px;
+  background-image: linear-gradient(45deg, #61389e, #8f389e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

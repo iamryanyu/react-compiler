@@ -1,0 +1,84 @@
+/**
+ * Functions
+ */
+
+// Convert a pixel value to REM units.
+@function rem($pixel) {
+  @return calc($pixel / 16 * 1rem);
+}
+
+/**
+ * Placehoders
+ */
+%screen-hide {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.l-page {
+  --white: #fff;
+  --black: #2d2f31;
+  --body-background-color: var(--white);
+  --body-font-color: var(--black);
+  --transition-theme-change: 0.3s ease-out;
+
+  background-color: var(--body-background-color);
+  color: var(--body-font-color);
+  min-height: 100vh;
+  min-width: 100vw;
+  padding: 20px;
+  transition: all var(--transition-theme-change);
+}
+
+.l-main {
+  margin: 20px;
+}
+
+.u-text-center {
+  text-align: center;
+}
+
+.c-input {
+  border: 1px solid #61389e;
+  border-radius: 4px;
+  padding: 8px;
+}
+
+.c-result {
+  align-items: center;
+  display: flex;
+  font-size: 24px;
+  gap: 6px;
+  justify-content: center;
+  margin: 20px;
+}
+
+.c-result__num {
+  font-size: 36px;
+}
+
+.c-theme {
+  border: 1px solid #61389e;
+  border-radius: 4px;
+  display: inline-block;
+  margin: 40px auto;
+  padding: 20px 60px;
+}
+
+.c-theme__status {
+  font-size: 24px;
+}
+
+.c-theme__enable {
+  align-items: center;
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin: 20px 0 0;
+}
